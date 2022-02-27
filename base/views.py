@@ -13,10 +13,7 @@ def home(request):
 
     topics = Topic.objects.all()
 
-    context = {
-        'rooms': rooms, 
-        'topics': 
-}
+    context = {'rooms': rooms, 'topics': topics}
     return render(request, 'base/home.html', context)
 
 def room(request, pk):
